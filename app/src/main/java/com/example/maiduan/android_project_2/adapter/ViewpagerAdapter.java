@@ -1,0 +1,42 @@
+package com.example.maiduan.android_project_2.adapter;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.maiduan.android_project_2.model.entity.Fragments;
+
+import java.util.List;
+
+/**
+ * Author: Lê Công Long Vũ
+ * Date: 9/30/2017
+ * Email: leconglongvu@gmail.com
+ */
+public class ViewpagerAdapter extends FragmentStatePagerAdapter {
+    private List<Fragments> fragmentses;
+
+    public ViewpagerAdapter(FragmentManager fm, List<Fragments> fragmentses) {
+        super(fm);
+
+        this.fragmentses = fragmentses;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        return fragmentses.get(position).getFragment();
+    }
+
+    @Override
+    public int getCount() {
+        return fragmentses.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (fragmentses.get(position).getTitle() == null)
+            return super.getPageTitle(position);
+        else
+            return fragmentses.get(position).getTitle();
+    }
+}

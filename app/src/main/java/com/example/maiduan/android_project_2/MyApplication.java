@@ -1,0 +1,24 @@
+package com.example.maiduan.android_project_2;
+
+import android.app.Application;
+import android.content.Context;
+import android.util.Log;
+
+/**
+ * Created by Vulcl on 3/29/2017
+ */
+
+public class MyApplication extends Application {
+    public static Context context;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        context = this;
+    }
+
+    public static void log(String title, String content) {
+        Log.e(title, content);
+    }
+}
