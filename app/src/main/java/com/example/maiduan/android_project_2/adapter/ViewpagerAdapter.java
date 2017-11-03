@@ -7,12 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.maiduan.android_project_2.model.entity.Fragments;
 
 import java.util.List;
-
-/**
- * Author: Lê Công Long Vũ
- * Date: 9/30/2017
- * Email: leconglongvu@gmail.com
- */
 public class ViewpagerAdapter extends FragmentStatePagerAdapter {
     private List<Fragments> fragmentses;
 

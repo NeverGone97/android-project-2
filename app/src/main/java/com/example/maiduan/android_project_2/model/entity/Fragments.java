@@ -2,11 +2,6 @@ package com.example.maiduan.android_project_2.model.entity;
 
 import android.support.v4.app.Fragment;
 
-/**
- * Author: Lê Công Long Vũ
- * Date: 9/30/2017
- * Email: leconglongvu@gmail.com
- */
 public class Fragments {
     private Fragment fragment;
     private String title;
